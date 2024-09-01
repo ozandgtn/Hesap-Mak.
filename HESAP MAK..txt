@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HesapMakinesi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+
+    function ekranSayıları(iNum) {
+      buttonsForm.totalInput.value += iNum;
+    }
+
+    function silme()  {
+      buttonsForm.totalInput.value = buttonsForm.totalInput.value.slice(0,0);
+    }
+
+    function geriAlma() {
+      buttonsForm.totalInput.value = buttonsForm.totalInput.value.slice(0,length-1);
+    }
+
+    function evalForm() {
+      if(buttonsForm.totalInput.value == "") {
+          buttonsForm.totalInput.value = "";
+      }
+      else {
+          buttonsForm.totalInput.value = eval(buttonsForm.totalInput.value);
+      }
+
+    }
+
+  </script>
+</head>
+<body style="background-color: lightblue;">
+  <div class="container">
+    <div class="panel" style="background-color: lightblue;">
+      <div class="row" style="margin-top: 15%;">
+        <div class="col-sm-8">
+        <div class=col-sm-offset-5>
+          <div class="panel">
+            <div class="panel-heading" style="text-align:center">
+              Hesap Makinesi
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                  <form name="buttonsForm">
+                    <div class="form-group">
+                      <input type="text" class="form-control" style="border-radius: 25px;" name="totalInput" />
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="col-sm-6">
+                          <button type="button" class="btn btn-light btn-md btn-block" style="width: 137.5px; color: white; border-radius: 25px;" name="clear" onclick="silme()">AC</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type="button"
+                           class="btn btn-light btn-md btn-block" style="color: white; border-radius: 25px;" name="geriAlma" onclick ="geriAlma()"> <---- </button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-warning btn-md btn-block" style="border-radius: 25px;" value=/ name="division" onclick="ekranSayıları(division.value)">/</button>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value=7 name="sven" onclick="ekranSayıları(sven.value)">7</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value=8 name="eight" onclick="ekranSayıları(eight.value)">8</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value=9 name="nine" onclick="ekranSayıları(nine.value)">9</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-warning btn-md btn-block" style="border-radius: 25px;" value=* name="multiplication" onclick="ekranSayıları(multiplication.value)">x</button>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value=4 name="four" onclick="ekranSayıları(four.value)">4</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value=5 name="five" onclick="ekranSayıları(five.value)">5</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value=6 name="six" onclick="ekranSayıları(six.value)">6</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-warning btn-md btn-block" style="border-radius: 25px;" value=- name="minus" onclick="ekranSayıları(minus.value)">-</button>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value="1" name="one" onclick="ekranSayıları(one.value)">1</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value="2" name="two" onclick="ekranSayıları(two.value)">2</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value="3" name="three" onclick="ekranSayıları(three.value)">3</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type="button" class="btn btn-warning btn-md btn-block" style="border-radius: 25px;" value="+" name="plus" onclick="ekranSayıları(plus.value)">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="col-sm-6">
+                          <button type="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value=0 name="zero" onclick="ekranSayıları(zero.value)">0</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-md btn-block" style="color: white; border-radius: 25px; background-color: rgb(100, 95, 95);" value=. name="dot" onclick="ekranSayıları(dot.value)">,</button>
+                        </div>
+                        <div class="col-sm-3">
+                          <button type ="button" class="btn btn-warning btn-md btn-block" style="border-radius: 25px;" value== name="equals" onclick="evalForm()">=</button>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer" style="text-align:center">
+              Ozan Alp Dağıtan
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
